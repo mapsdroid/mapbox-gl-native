@@ -172,9 +172,9 @@ class MGLDocumentationGuideTests: XCTestCase, MGLMapViewDelegate {
         #endif
         
         layer.circleColor = NSExpression(format:
-            "TERNARY(FUNCTION(type, 'stringValue') = 'earthquake', %@, " +
-            "TERNARY(FUNCTION(type, 'stringValue') = 'explosion', %@, " +
-            "TERNARY(FUNCTION(type, 'stringValue') = 'quarry blast', %@, " +
+            "TERNARY(type = 'earthquake', %@, " +
+            "TERNARY(type = 'explosion', %@, " +
+            "TERNARY(type = 'quarry blast', %@, " +
             "%@)))",
                                          argumentArray: colors)
         //#-end-example-code

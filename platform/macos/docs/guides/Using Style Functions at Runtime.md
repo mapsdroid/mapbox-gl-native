@@ -127,9 +127,9 @@ There are three main types of events in the dataset: earthquakes, explosions, an
 let colors: [NSColor] = [.orange, .red, .yellow, .blue]
 
 layer.circleColor = NSExpression(format:
-    "TERNARY(FUNCTION(type, 'stringValue') = 'earthquake', %@, " +
-    "TERNARY(FUNCTION(type, 'stringValue') = 'explosion', %@, " +
-    "TERNARY(FUNCTION(type, 'stringValue') = 'quarry blast', %@, " +
+    "TERNARY(type = 'earthquake', %@, " +
+    "TERNARY(type = 'explosion', %@, " +
+    "TERNARY(type = 'quarry blast', %@, " +
     "%@)))",
                                  argumentArray: colors)
 ```
