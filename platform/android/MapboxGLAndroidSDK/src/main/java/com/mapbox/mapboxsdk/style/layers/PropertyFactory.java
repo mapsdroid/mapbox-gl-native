@@ -1535,6 +1535,7 @@ public class PropertyFactory {
     return new PaintPropertyValue<>("fill-extrusion-opacity", expression);
   }
 
+
   /**
    * The opacity of the entire fill extrusion layer. This is rendered on a per-layer, not per-feature, basis, and data-driven styling is not available.
    *
@@ -1984,6 +1985,234 @@ public class PropertyFactory {
   @Deprecated
   public static <Z extends Number> PropertyValue<CameraFunction<Z, Float>> rasterFadeDuration(CameraFunction<Z, Float> function) {
     return new PaintPropertyValue<>("raster-fade-duration", function);
+  }
+
+  /**
+   * The direction of the light source used to generate the hillshading with 0 as the top of the viewport if {@link Property.HILLSHADE_ILLUMINATION_ANCHOR} is set to `viewport` and due north if {@link Property.HILLSHADE_ILLUMINATION_ANCHOR} is set to `map`.
+   *
+   * @param value a Float value
+   * @return property wrapper around Float
+   */
+  public static PropertyValue<Float> hillshadeIlluminationDirection(Float value) {
+    return new PaintPropertyValue<>("hillshade-illumination-direction", value);
+  }
+
+  /**
+   * The direction of the light source used to generate the hillshading with 0 as the top of the viewport if {@link Property.HILLSHADE_ILLUMINATION_ANCHOR} is set to `viewport` and due north if {@link Property.HILLSHADE_ILLUMINATION_ANCHOR} is set to `map`.
+   *
+   * @param expression an expression statement
+   * @return property wrapper around an expression statement
+   */
+  public static PropertyValue<Expression> hillshadeIlluminationDirection(Expression expression) {
+    return new PaintPropertyValue<>("hillshade-illumination-direction", expression);
+  }
+
+
+  /**
+   * The direction of the light source used to generate the hillshading with 0 as the top of the viewport if {@link Property.HILLSHADE_ILLUMINATION_ANCHOR} is set to `viewport` and due north if {@link Property.HILLSHADE_ILLUMINATION_ANCHOR} is set to `map`.
+   *
+   * @param <Z> the zoom parameter type
+   * @param function a wrapper {@link CameraFunction} for Float
+   * @return property wrapper around a Float function
+   */
+  @Deprecated
+  public static <Z extends Number> PropertyValue<CameraFunction<Z, Float>> hillshadeIlluminationDirection(CameraFunction<Z, Float> function) {
+    return new PaintPropertyValue<>("hillshade-illumination-direction", function);
+  }
+
+  /**
+   * Direction of light source when map is rotated.
+   *
+   * @param value a String value
+   * @return property wrapper around String
+   */
+  public static PropertyValue<String> hillshadeIlluminationAnchor(@Property.HILLSHADE_ILLUMINATION_ANCHOR String value) {
+    return new PaintPropertyValue<>("hillshade-illumination-anchor", value);
+  }
+
+  /**
+   * Direction of light source when map is rotated.
+   *
+   * @param expression an expression statement
+   * @return property wrapper around an expression statement
+   */
+  public static PropertyValue<Expression> hillshadeIlluminationAnchor(Expression expression) {
+    return new PaintPropertyValue<>("hillshade-illumination-anchor", expression);
+  }
+
+
+  /**
+   * Direction of light source when map is rotated.
+   *
+   * @param <Z> the zoom parameter type
+   * @param function a wrapper {@link CameraFunction} for String
+   * @return property wrapper around a String function
+   */
+  @Deprecated
+  public static <Z extends Number> PropertyValue<CameraFunction<Z, String>> hillshadeIlluminationAnchor(CameraFunction<Z, String> function) {
+    return new PaintPropertyValue<>("hillshade-illumination-anchor", function);
+  }
+
+  /**
+   * Intensity of the hillshade
+   *
+   * @param value a Float value
+   * @return property wrapper around Float
+   */
+  public static PropertyValue<Float> hillshadeExaggeration(Float value) {
+    return new PaintPropertyValue<>("hillshade-exaggeration", value);
+  }
+
+  /**
+   * Intensity of the hillshade
+   *
+   * @param expression an expression statement
+   * @return property wrapper around an expression statement
+   */
+  public static PropertyValue<Expression> hillshadeExaggeration(Expression expression) {
+    return new PaintPropertyValue<>("hillshade-exaggeration", expression);
+  }
+
+
+  /**
+   * Intensity of the hillshade
+   *
+   * @param <Z> the zoom parameter type
+   * @param function a wrapper {@link CameraFunction} for Float
+   * @return property wrapper around a Float function
+   */
+  @Deprecated
+  public static <Z extends Number> PropertyValue<CameraFunction<Z, Float>> hillshadeExaggeration(CameraFunction<Z, Float> function) {
+    return new PaintPropertyValue<>("hillshade-exaggeration", function);
+  }
+
+  /**
+   * The shading color of areas that face away from the light source.
+   *
+   * @param value a int color value
+   * @return property wrapper around String color
+   */
+  public static PropertyValue<String> hillshadeShadowColor(@ColorInt int value) {
+    return new PaintPropertyValue<>("hillshade-shadow-color", colorToRgbaString(value));
+  }
+
+  /**
+   * The shading color of areas that face away from the light source.
+   *
+   * @param value a String value
+   * @return property wrapper around String
+   */
+  public static PropertyValue<String> hillshadeShadowColor(String value) {
+    return new PaintPropertyValue<>("hillshade-shadow-color", value);
+  }
+
+  /**
+   * The shading color of areas that face away from the light source.
+   *
+   * @param expression an expression statement
+   * @return property wrapper around an expression statement
+   */
+  public static PropertyValue<Expression> hillshadeShadowColor(Expression expression) {
+    return new PaintPropertyValue<>("hillshade-shadow-color", expression);
+  }
+
+
+  /**
+   * The shading color of areas that face away from the light source.
+   *
+   * @param <Z> the zoom parameter type
+   * @param function a wrapper {@link CameraFunction} for String
+   * @return property wrapper around a String function
+   */
+  @Deprecated
+  public static <Z extends Number> PropertyValue<CameraFunction<Z, String>> hillshadeShadowColor(CameraFunction<Z, String> function) {
+    return new PaintPropertyValue<>("hillshade-shadow-color", function);
+  }
+
+  /**
+   * The shading color of areas that faces towards the light source.
+   *
+   * @param value a int color value
+   * @return property wrapper around String color
+   */
+  public static PropertyValue<String> hillshadeHighlightColor(@ColorInt int value) {
+    return new PaintPropertyValue<>("hillshade-highlight-color", colorToRgbaString(value));
+  }
+
+  /**
+   * The shading color of areas that faces towards the light source.
+   *
+   * @param value a String value
+   * @return property wrapper around String
+   */
+  public static PropertyValue<String> hillshadeHighlightColor(String value) {
+    return new PaintPropertyValue<>("hillshade-highlight-color", value);
+  }
+
+  /**
+   * The shading color of areas that faces towards the light source.
+   *
+   * @param expression an expression statement
+   * @return property wrapper around an expression statement
+   */
+  public static PropertyValue<Expression> hillshadeHighlightColor(Expression expression) {
+    return new PaintPropertyValue<>("hillshade-highlight-color", expression);
+  }
+
+
+  /**
+   * The shading color of areas that faces towards the light source.
+   *
+   * @param <Z> the zoom parameter type
+   * @param function a wrapper {@link CameraFunction} for String
+   * @return property wrapper around a String function
+   */
+  @Deprecated
+  public static <Z extends Number> PropertyValue<CameraFunction<Z, String>> hillshadeHighlightColor(CameraFunction<Z, String> function) {
+    return new PaintPropertyValue<>("hillshade-highlight-color", function);
+  }
+
+  /**
+   * The shading color used to accentuate rugged terrain like sharp cliffs and gorges.
+   *
+   * @param value a int color value
+   * @return property wrapper around String color
+   */
+  public static PropertyValue<String> hillshadeAccentColor(@ColorInt int value) {
+    return new PaintPropertyValue<>("hillshade-accent-color", colorToRgbaString(value));
+  }
+
+  /**
+   * The shading color used to accentuate rugged terrain like sharp cliffs and gorges.
+   *
+   * @param value a String value
+   * @return property wrapper around String
+   */
+  public static PropertyValue<String> hillshadeAccentColor(String value) {
+    return new PaintPropertyValue<>("hillshade-accent-color", value);
+  }
+
+  /**
+   * The shading color used to accentuate rugged terrain like sharp cliffs and gorges.
+   *
+   * @param expression an expression statement
+   * @return property wrapper around an expression statement
+   */
+  public static PropertyValue<Expression> hillshadeAccentColor(Expression expression) {
+    return new PaintPropertyValue<>("hillshade-accent-color", expression);
+  }
+
+
+  /**
+   * The shading color used to accentuate rugged terrain like sharp cliffs and gorges.
+   *
+   * @param <Z> the zoom parameter type
+   * @param function a wrapper {@link CameraFunction} for String
+   * @return property wrapper around a String function
+   */
+  @Deprecated
+  public static <Z extends Number> PropertyValue<CameraFunction<Z, String>> hillshadeAccentColor(CameraFunction<Z, String> function) {
+    return new PaintPropertyValue<>("hillshade-accent-color", function);
   }
 
   /**
@@ -2544,7 +2773,7 @@ public class PropertyFactory {
   }
 
   /**
-   * Name of image in sprite to use for drawing an image background. A string with `{tokens}` replaced, referencing the data property to pull from. (`{token}` replacement is only supported for literal {@link PropertyFactory#iconImage} values; not for property functions.)
+   * Name of image in sprite to use for drawing an image background. Within literal values and zoom functions, property names enclosed in curly brackets (e.g. `{token}`) are replaced with the value of the named property. Expressions and property functions do not support this syntax; for equivalent functionality in expressions, use the [`concat`](#expressions-concat) and [`get`](#expressions-get) operators.
    *
    * @param value a String value
    * @return property wrapper around String
@@ -2554,7 +2783,7 @@ public class PropertyFactory {
   }
 
   /**
-   * Name of image in sprite to use for drawing an image background. A string with `{tokens}` replaced, referencing the data property to pull from. (`{token}` replacement is only supported for literal {@link PropertyFactory#iconImage} values; not for property functions.)
+   * Name of image in sprite to use for drawing an image background. Within literal values and zoom functions, property names enclosed in curly brackets (e.g. `{token}`) are replaced with the value of the named property. Expressions and property functions do not support this syntax; for equivalent functionality in expressions, use the [`concat`](#expressions-concat) and [`get`](#expressions-get) operators.
    *
    * @param value a String value
    * @return property wrapper around String
@@ -2565,7 +2794,7 @@ public class PropertyFactory {
 
 
   /**
-   * Name of image in sprite to use for drawing an image background. A string with `{tokens}` replaced, referencing the data property to pull from. (`{token}` replacement is only supported for literal {@link PropertyFactory#iconImage} values; not for property functions.)
+   * Name of image in sprite to use for drawing an image background. Within literal values and zoom functions, property names enclosed in curly brackets (e.g. `{token}`) are replaced with the value of the named property. Expressions and property functions do not support this syntax; for equivalent functionality in expressions, use the [`concat`](#expressions-concat) and [`get`](#expressions-get) operators.
    *
    * @param <T> the function input type
    * @param function a wrapper function for String
@@ -2672,7 +2901,7 @@ public class PropertyFactory {
   }
 
   /**
-   * Offset distance of icon from its anchor. Positive values indicate right and down, while negative values indicate left and up. When combined with {@link PropertyFactory#iconRotate} the offset will be as if the rotated direction was up.
+   * Offset distance of icon from its anchor. Positive values indicate right and down, while negative values indicate left and up. Each component is multiplied by the value of {@link PropertyFactory#iconSize} to obtain the final offset in density-independent pixels. When combined with {@link PropertyFactory#iconRotate} the offset will be as if the rotated direction was up.
    *
    * @param value a Float[] value
    * @return property wrapper around Float[]
@@ -2682,7 +2911,7 @@ public class PropertyFactory {
   }
 
   /**
-   * Offset distance of icon from its anchor. Positive values indicate right and down, while negative values indicate left and up. When combined with {@link PropertyFactory#iconRotate} the offset will be as if the rotated direction was up.
+   * Offset distance of icon from its anchor. Positive values indicate right and down, while negative values indicate left and up. Each component is multiplied by the value of {@link PropertyFactory#iconSize} to obtain the final offset in density-independent pixels. When combined with {@link PropertyFactory#iconRotate} the offset will be as if the rotated direction was up.
    *
    * @param value a Float[] value
    * @return property wrapper around Float[]
@@ -2693,7 +2922,7 @@ public class PropertyFactory {
 
 
   /**
-   * Offset distance of icon from its anchor. Positive values indicate right and down, while negative values indicate left and up. When combined with {@link PropertyFactory#iconRotate} the offset will be as if the rotated direction was up.
+   * Offset distance of icon from its anchor. Positive values indicate right and down, while negative values indicate left and up. Each component is multiplied by the value of {@link PropertyFactory#iconSize} to obtain the final offset in density-independent pixels. When combined with {@link PropertyFactory#iconRotate} the offset will be as if the rotated direction was up.
    *
    * @param <T> the function input type
    * @param function a wrapper function for Float[]
@@ -2832,7 +3061,7 @@ public class PropertyFactory {
   }
 
   /**
-   * Value to use for a text label. Feature properties are specified using tokens like `{field_name}`. (`{token}` replacement is only supported for literal {@link PropertyFactory#textField} values; not for property functions.)
+   * Value to use for a text label. Within literal values and zoom functions, property names enclosed in curly brackets (e.g. `{token}`) are replaced with the value of the named property. Expressions and property functions do not support this syntax; for equivalent functionality in expressions, use the [`concat`](#expressions-concat) and [`get`](#expressions-get) operators.
    *
    * @param value a String value
    * @return property wrapper around String
@@ -2842,7 +3071,7 @@ public class PropertyFactory {
   }
 
   /**
-   * Value to use for a text label. Feature properties are specified using tokens like `{field_name}`. (`{token}` replacement is only supported for literal {@link PropertyFactory#textField} values; not for property functions.)
+   * Value to use for a text label. Within literal values and zoom functions, property names enclosed in curly brackets (e.g. `{token}`) are replaced with the value of the named property. Expressions and property functions do not support this syntax; for equivalent functionality in expressions, use the [`concat`](#expressions-concat) and [`get`](#expressions-get) operators.
    *
    * @param value a String value
    * @return property wrapper around String
@@ -2853,7 +3082,7 @@ public class PropertyFactory {
 
 
   /**
-   * Value to use for a text label. Feature properties are specified using tokens like `{field_name}`. (`{token}` replacement is only supported for literal {@link PropertyFactory#textField} values; not for property functions.)
+   * Value to use for a text label. Within literal values and zoom functions, property names enclosed in curly brackets (e.g. `{token}`) are replaced with the value of the named property. Expressions and property functions do not support this syntax; for equivalent functionality in expressions, use the [`concat`](#expressions-concat) and [`get`](#expressions-get) operators.
    *
    * @param <T> the function input type
    * @param function a wrapper function for String
