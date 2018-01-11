@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<testsuites name="suites">
+  <testsuite name="suite">
+    <testcase name="case">
+      <skipped message="skippedmsg">skippeddesc</skipped>
+      <error message="errormsg">errordesc</error>
+      <failure message="failuremsg">failuredesc</failure>
+      <system-out>STDOUT text</system-out>
+      <system-err>STDERR text</system-err>
+    </testcase>
+  </testsuite>
+</testsuites>
